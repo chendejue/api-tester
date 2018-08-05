@@ -27,8 +27,8 @@ trait BootExtension
     {
         parent::routes(function ($router) {
             /* @var \Illuminate\Routing\Router $router */
-            $router->get('api-tester', 'Encore\Admin\ApiTester\ApiTesterController@index')->name('api-tester-index');
-            $router->post('api-tester/handle', 'Encore\Admin\ApiTester\ApiTesterController@handle')->name('api-tester-handle');
+            $router->get('api-tester-zh', 'Encore\Admin\ApiTester\ApiTesterController@index')->name('api-tester-index');
+            $router->post('api-tester-zh/handle', 'Encore\Admin\ApiTester\ApiTesterController@handle')->name('api-tester-handle');
         });
     }
 
@@ -37,9 +37,9 @@ trait BootExtension
      */
     public static function import()
     {
-        parent::createMenu('Api tester', 'api-tester', 'fa-sliders');
+        parent::createMenu('Api tester', 'api-tester-zh', 'fa-sliders');
 
-        parent::createPermission('Api tester', 'ext.api-tester', 'api-tester*');
+        parent::createPermission('Api tester', 'ext.api-tester-zh', 'api-tester-zh*');
     }
 
     /**
