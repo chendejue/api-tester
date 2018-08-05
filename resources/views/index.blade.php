@@ -189,7 +189,7 @@
 
         <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-                <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="false">Routes</a></li>
+                <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="false">API路由列表</a></li>
                 {{--<li><a href="#tab_2" data-toggle="tab" aria-expanded="true">History</a></li>--}}
             </ul>
             <div class="tab-content">
@@ -197,7 +197,7 @@
 
                 <form action="#" method="post">
                     <div class="input-group">
-                        <input type="text" name="message" placeholder="Type Url ..." class="form-control filter-routes">
+                        <input type="text" name="message" placeholder="搜索url ..." class="form-control filter-routes">
                         <span class="input-group-btn">
                             <button type="button" class="btn btn-primary btn-flat"><i class="fa fa-search"></i></button>
                         </span>
@@ -260,39 +260,39 @@
             <form class="form-horizontal api-tester-form">
                 <div class="box-body">
                     <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">Request</label>
+                        <label for="inputEmail3" class="col-sm-2 control-label">请求地址:</label>
 
                         <div class="col-sm-10">
                             <div class="input-group">
                                 <span class="input-group-btn">
-                                    <a class="btn bg-gray btn-flat method">method</a>
+                                    <a class="btn bg-gray btn-flat method">方式</a>
                                 </span>
-                                <input type="text" name="uri" class="form-control uri">
+                                <input type="text" name="uri" class="form-control uri" readonly="readonly" autocomplete="off">
                                 <input type="hidden" name="method" class="form-control method">
                                 {{ csrf_field() }}
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="inputUser" class="col-sm-2 control-label">Login as</label>
+                        <label for="inputUser" class="col-sm-2 control-label">登录用户</label>
 
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputUser" name="user" placeholder="Enter a user id or token to login with specific user.">
+                            <input type="text" class="form-control" id="inputUser" name="user" placeholder="输入用户的ID进行模拟自动登录">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">Parameters</label>
+                        <label class="col-sm-2 control-label">相关参数</label>
 
                         <div class="col-sm-10">
                             <div class="params">
                                 <div class="form-inline param-add">
                                     <div class="form-group"> <!-- Username field -->
-                                        <input type="text" class="form-control" style="width: 120px" placeholder="key"/>
+                                        <input type="text" class="form-control" style="width: 120px" placeholder="参数名"/>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group">
-                                            <input type="text" class="form-control" style="width: 280px"  placeholder="value"/>
+                                            <input type="text" class="form-control" style="width: 280px"  placeholder="参数值"/>
                                     <span class="input-group-btn">
                                       <a type="button" class="btn btn-default btn-flat change-val-type"><i class="fa fa-upload"></i></a>
                                     </span>
@@ -305,7 +305,7 @@
 
                     <div class="form-group" style="margin-bottom: 0px;">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-primary">Send</button>
+                            <button type="submit" class="btn btn-primary">发送</button>
                         </div>
                     </div>
 
@@ -316,8 +316,8 @@
 
         <div class="nav-tabs-custom response-tabs hide">
             <ul class="nav nav-tabs">
-                <li class="active"><a href="#content" data-toggle="tab">Content</a></li>
-                <li><a href="#headers" data-toggle="tab">Headers</a></li>
+                <li class="active"><a href="#content" data-toggle="tab">返回内容</a></li>
+                <li><a href="#headers" data-toggle="tab">头部信息</a></li>
                 {{--<li><a href="#cookies" data-toggle="tab">Cookies</a></li>--}}
                 <li class="status-label"><span class="label label-default response-status"></span></li>
             </ul>

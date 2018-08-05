@@ -12,7 +12,7 @@ class ApiTesterController extends Controller
     public function index()
     {
         return Admin::content(function (Content $content) {
-            $content->header('Api tester');
+            $content->header('Api测试工具');
 
             $tester = new ApiTester();
 
